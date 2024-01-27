@@ -1,0 +1,414 @@
+/* Dashboard.css */
+  .navbar {
+    background: rgb(33,229,245);
+    background: linear-gradient(137deg, rgba(33,229,245,1) 28%, rgba(1,255,120,0.9725140056022409) 80%);
+    overflow: hidden;
+    width: 100%; 
+    position: fixed; 
+    top: 46px; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline-block;
+  }
+  
+  .navbar a {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    text-align: center;
+    padding: 25px 60px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #ff006f;
+    color: black;
+  }
+  
+
+  body > div {
+    margin-top: 50px;
+  }
+  
+  /* Design in Homepage*/
+
+.content {
+  padding: 50px; 
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 40px; 
+}
+
+.welcome-section h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.welcome-section p {
+  font-size: 18px; 
+  color: #666; 
+}
+
+.burger-image {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.burger-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.animated-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px; 
+  margin-top: 50px;
+}
+
+.animated-text {
+  animation: fadeInUp 1s ease-in-out;
+  font-size: 35px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.explore-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #333;
+  text-decoration: none;
+  border: 3px solid #000000; 
+  border-radius: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  animation: pulse 1s infinite alternate; /* Add animation */
+  margin-top: 20px; 
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.explore-button:hover {
+  background-color: #f2ff00; 
+  color: #000000; 
+  border-color: transparent;
+  animation: none; /* Stop animation on hover */
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0; 
+  transform: translateY(20px); 
+}
+
+.burger-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0; 
+  transform: translateY(20px); 
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-section, .burger-image img {
+  animation: fadeInUp 1s ease-in-out forwards;
+  
+}
+/* Gallery */
+.menu-header {
+  margin-top: 7%;
+  text-align: center;
+  font-size: 45px;
+  font-family: calibre;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.product-gallery {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  opacity: 0;
+  transform: scale(0.5); /* Initial scale set to 0.5 */
+  animation: scaleIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.product-item {
+  text-align: center;
+  overflow: hidden; 
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.product-item:hover img {
+  transform: scale(1.1); 
+}
+
+.P-item{
+  font-size: 25px;
+  font-family: calibre;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #000000;
+}
+
+/* LOCATION */
+
+.location-container {
+  overflow: hidden;
+}
+
+.LocContent {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 5%;
+  padding: 20px;
+  height: 100vh;
+}
+
+.content-left {
+  flex-grow: 1;
+  overflow-y: auto; 
+}
+
+.branches-list-container {
+  display: flex;
+  margin-top: 30px;
+  gap: 20px; 
+}
+
+.luzon,
+.visayas,
+.mindanao {
+  background-color:transparent;
+  border: 3px solid #000000; 
+  padding: 10px;
+  border-radius: 10px;
+  flex: 1; 
+}
+
+.luzon ul,
+.visayas ul,
+.mindanao ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  color: #0004ff;
+  text-decoration-line: underline;
+  padding: 0;
+  opacity: 0; 
+  animation: fadeInUp 1s ease-in-out; 
+  animation-fill-mode: forwards; 
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.luzon li,
+.visayas li,
+.mindanao li {
+  margin: 5px 0;
+}
+
+.branches-map {
+  max-width: 100%;
+  height: auto;
+  margin-left: 30px;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loc-header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #555;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out;
+  animation-fill-mode: forwards;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ABOUT */
+/* Add the following styles to your Dashboard.css */
+
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
+}
+
+.about h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about h2 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 30px;
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.about li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Add animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/*LOGOUT */
+.logout-button {
+  background-color: #fffffffb;
+  color: #000000;
+  border: 2px solid black;
+  padding: 20px 25px;
+  cursor: pointer;
+  font-size: 30px;
+  margin-right: 25px;
+  border-radius: 20px;
+}
+
+.logout-button:hover {
+  background-color: #6b6b6b;
+}
